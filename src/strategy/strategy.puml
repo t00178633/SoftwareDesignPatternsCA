@@ -1,0 +1,57 @@
+@startuml
+
+abstract class Vehicle {
+ForSaleBehaviour forsale
+setDriveability()
+setForSale()
+driveable: Driveable
+isForSale()
+mileage()
+bodyType()
+
+}
+
+interface Driveability{
+driveable()
+}
+
+interface ForSaleBehaviour{
+forSale()
+}
+
+class ForSale {
+forSale()
+}
+
+class NotForSale {
+forSale()
+}
+
+class UnDriveable {
+driveable()
+}
+
+class SaloonVehicle {
+bodyType()
+ }
+class Hatchback {
+bodyType()
+}
+
+class WriteOff {
+bodyType()
+}
+class VintageVehicle {
+bodyType()
+}
+
+Vehicle <|-- SaloonVehicle
+Vehicle <|-- VintageVehicle
+Vehicle <|-- Hatchback
+Vehicle <|-- WriteOff
+Driveability <|.. Vehicle
+Driveability <|-- UnDriveable
+ForSaleBehaviour <|.. ForSale
+ForSaleBehaviour <|.. NotForSale
+Vehicle <|-- ForSaleBehaviour
+@enduml
