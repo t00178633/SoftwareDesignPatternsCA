@@ -1,0 +1,26 @@
+@startuml
+
+
+
+interface ForSaleBehaviour{
+forSale()
+}
+
+class ForSale {
+forSale()
+}
+
+class NotForSale {
+forSale()
+}
+
+class Wanted {
+VehicleWanted()
+}
+
+
+
+ForSaleBehaviour <|.. ForSale
+ForSaleBehaviour <|.. NotForSale
+NotForSale <|--Wanted
+@enduml
