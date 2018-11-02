@@ -1,0 +1,34 @@
+@startuml
+
+abstract class Vehicle {
+setDriveability()
+setForSale()
+isDriveable()
+isForSale()
+mileage()
+bodyType()
+
+}
+
+
+
+class SaloonVehicle {
+bodyType()
+ }
+class Hatchback {
+bodyType()
+}
+
+class WriteOff {
+bodyType()
+}
+class VintageVehicle {
+bodyType()
+}
+
+Vehicle <|-- SaloonVehicle
+Vehicle <|-- VintageVehicle
+Vehicle <|-- Hatchback
+Vehicle <|-- WriteOff
+
+@enduml
