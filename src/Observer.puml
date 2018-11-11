@@ -1,0 +1,48 @@
+@startuml
+
+abstract class Vehicle {
+ForSaleBehaviour forsale
+setDriveability()
+setForSale()
+driveable: Driveable
+isForSale()
+mileage()
+bodyType()
+
+}
+
+
+
+class SaloonVehicle {
+bodyType()
+setDriveability()
+mileage()
+ }
+class Hatchback {
+bodyType()
+setDriveability()
+mileage()
+}
+
+class Observer {
+Update-NewVehicle()
+}
+
+class WriteOff {
+bodyType()
+setDriveability()
+mileage()
+}
+class VintageVehicle {
+bodyType()
+setDriveability()
+mileage()
+}
+
+Observer <|-- SaloonVehicle
+Observer <|-- VintageVehicle
+Observer <|-- Hatchback
+Observer <|-- WriteOff
+Vehicle <|-- Observer
+
+@enduml
